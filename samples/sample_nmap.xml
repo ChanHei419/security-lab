@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<nmaprun scanner="nmap" args="nmap -sV -T4 10.10.0.0/24" startstr="Mon Jan 12 20:15:03 2026">
+  <host>
+    <address addr="10.10.0.5" addrtype="ipv4"/>
+    <hostnames>
+      <hostname name="web.lab.local" type="PTR"/>
+    </hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open" reason="syn-ack"/>
+        <service name="ssh" product="OpenSSH" version="9.6"/>
+      </port>
+      <port protocol="tcp" portid="443">
+        <state state="open" reason="syn-ack"/>
+        <service name="https" product="nginx" version="1.24"/>
+      </port>
+      <port protocol="tcp" portid="3306">
+        <state state="closed" reason="reset"/>
+        <service name="mysql"/>
+      </port>
+    </ports>
+  </host>
+  <host>
+    <address addr="10.10.0.9" addrtype="ipv4"/>
+    <ports>
+      <port protocol="tcp" portid="80">
+        <state state="filtered" reason="no-response"/>
+        <service name="http"/>
+      </port>
+    </ports>
+  </host>
+  <host>
+    <address addr="10.10.0.14" addrtype="ipv4"/>
+    <hostnames>
+      <hostname name="db.lab.local" type="PTR"/>
+    </hostnames>
+    <ports>
+      <port protocol="tcp" portid="5432">
+        <state state="open" reason="syn-ack"/>
+        <service name="postgresql" product="PostgreSQL" version="16.2"/>
+      </port>
+    </ports>
+  </host>
+</nmaprun>
