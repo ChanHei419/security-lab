@@ -1,5 +1,6 @@
 # Security Lab
 
+![Tests](https://github.com/ChanHei419/security-lab/actions/workflows/tests.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![Suricata](https://img.shields.io/badge/Suricata-IDS-6C2E95)
 ![Nmap](https://img.shields.io/badge/Nmap-recon-4682B4)
